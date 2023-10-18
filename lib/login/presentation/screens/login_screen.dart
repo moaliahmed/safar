@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:safar/login/presentation/component/button_component.dart';
 import 'package:safar/login/presentation/component/text_form_field_component.dart';
+import 'package:safar/login/presentation/screens/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -122,7 +123,9 @@ class LoginScreen extends StatelessWidget {
                           children: [
                             const Text('Don’t have an account?'),
                             TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  SignUpScreen(),));
+                              },
                               child: const Text(
                                 'Sign Up',
                                 style: TextStyle(
