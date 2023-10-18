@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:safar/login/presentation/component/button_component.dart';
 import 'package:safar/login/presentation/component/text_form_field_component.dart';
 import 'package:safar/login/presentation/screens/signup_screen.dart';
+import 'package:safar/login/presentation/screens/forgot_password.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -57,14 +58,17 @@ class LoginScreen extends StatelessWidget {
                         icons: Icons.lock_outline_rounded,
                         textEditingController: passwordEditingController,
                       ),
-                      const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          textAlign: TextAlign.right,
-                          'Forget Password?',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Color(0xffff4900),
+                       Padding(
+                        padding:const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => ForgotPasswordScreen() ,)),
+                          child:const Text(
+                            textAlign: TextAlign.right,
+                            'Forget Password?',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Color(0xffff4900),
+                            ),
                           ),
                         ),
                       ),
