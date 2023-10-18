@@ -35,7 +35,7 @@ class _OpenScreenState extends State<OpenScreen> {
                 fit: BoxFit.fill)),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Image.asset('assets/images/logo.png'),
-          Text(
+         const Text(
             'Safar',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 52),
           )
