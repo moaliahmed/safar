@@ -14,10 +14,14 @@ class TextFormFieldComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      decoration: InputDecoration(
-        prefixIcon: Icon(icons,color: Color(0xff0090ff),),
-        hintText: title,
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: TextFormField(
+        decoration: InputDecoration(
+          prefixIcon: Icon(icons,color:const Color(0xff0090ff),),
+          hintText: title,
+          hintStyle:const TextStyle(color: Colors.black,fontWeight: FontWeight.bold)
+        ),
       ),
     );
   }

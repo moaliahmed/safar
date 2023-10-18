@@ -13,7 +13,7 @@ class _OpenScreenState extends State<OpenScreen> {
   @override
   void initState() {
     Timer(
-      Duration(seconds: 3),
+     const Duration(seconds: 3),
       () => Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => OnboardingScreen(),),
       ),

@@ -25,9 +25,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ++_pageIndex;
         } else {
           _pageIndex = 0;
-        } _pageController.animateToPage(_pageIndex,
+        }
+        _pageController.animateToPage(_pageIndex,
             duration: const Duration(milliseconds: 350), curve: Curves.easeIn);
-
       },
     );
     super.initState();
@@ -45,9 +45,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Scaffold(
       body: PageView.builder(
         onPageChanged: (value) {
-          setState(() {
-            _pageIndex = value;
-          });
+          setState(
+            () {
+              _pageIndex = value;
+            },
+          );
         },
         controller: _pageController,
         itemCount: 3,
@@ -56,7 +58,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             pageIndex: index,
             function: () {
               _pageController.animateToPage(++_pageIndex,
-                    duration: const Duration(milliseconds: 350), curve: Curves.easeIn);
+                  duration: const Duration(milliseconds: 350),
+                  curve: Curves.easeIn);
             },
           );
         },

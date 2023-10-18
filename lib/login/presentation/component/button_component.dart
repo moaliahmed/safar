@@ -15,7 +15,9 @@ class ButtonComponent extends StatelessWidget {
         alignment: Alignment.center,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: const Color(0xff0FA3E2)),
+            color: const Color(0xff0FA3E2),
+          image:const DecorationImage(image: AssetImage('assets/images/Rectangle 2.2.png'),fit:BoxFit.fill),
+        ),
         height: 57,
         width: MediaQuery.of(context).size.width,
         child: Text(
