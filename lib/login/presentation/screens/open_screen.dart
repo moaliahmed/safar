@@ -37,7 +37,7 @@ class _OpenScreenState extends State<OpenScreen> {
           Image.asset('assets/images/logo.png'),
          const Text(
             'Safar',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 52),
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 52,color: Colors.white),
           )
         ]),
       ),

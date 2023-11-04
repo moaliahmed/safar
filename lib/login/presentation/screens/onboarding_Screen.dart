@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:safar/login/presentation/component/dotindicator_component.dart';
 import 'package:safar/login/presentation/component/onbourd_component.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -43,27 +44,48 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView.builder(
-        onPageChanged: (value) {
-          setState(
-            () {
-              _pageIndex = value;
-            },
-          );
-        },
-        controller: _pageController,
-        itemCount: 3,
-        itemBuilder: (context, index) {
-          return OnboardComponent(
-            pageIndex: index,
-            function: () {
-              _pageController.animateToPage(++_pageIndex,
-                  duration: const Duration(milliseconds: 350),
-                  curve: Curves.easeIn);
-            },
-          );
-        },
-      ),
+      body: Stack(children: [
+        PageView.builder(
+          onPageChanged: (value) {
+            setState(
+              () {
+                _pageIndex = value;
+              },
+            );
+          },
+          controller: _pageController,
+          itemCount: 3,
+          itemBuilder: (context, index) {
+            return OnboardComponent(
+              pageIndex: index,
+              function: () {
+                _pageController.animateToPage(++_pageIndex,
+                    duration: const Duration(milliseconds: 350),
+                    curve: Curves.easeIn);
+              },
+            );
+          },
+        ),
+        Positioned(
+          bottom: 25,
+          //right: MediaQuery.of(context).size.width / 2,
+          left: MediaQuery.of(context).size.width / 2 - 20,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ...List.generate(
+                demoData.length,
+                (index) => Padding(
+                  padding: const EdgeInsets.only(right: 4),
+                  child: DotIndicator(
+                    isActive: index == _pageIndex,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        )
+      ]),
     );
   }
 }

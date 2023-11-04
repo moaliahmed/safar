@@ -58,7 +58,7 @@ class OnboardComponent extends StatelessWidget {
                           : Navigator.of(context).pushReplacement(
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return LoginScreen();
+                                  return SignInScreen();
                                 },
                               ),
                             );
@@ -67,7 +67,7 @@ class OnboardComponent extends StatelessWidget {
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        image:const DecorationImage(
+                        image: const DecorationImage(
                             image: AssetImage(
                               'assets/images/Rectangle 2.2.png',
                             ),
@@ -87,25 +87,6 @@ class OnboardComponent extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
-          bottom: 25,
-          //right: MediaQuery.of(context).size.width / 2,
-          left: MediaQuery.of(context).size.width / 2-20,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ...List.generate(
-                demoData.length,
-                (index) => Padding(
-                  padding: const EdgeInsets.only(right: 4),
-                  child: DotIndicator(
-                    isActive: index == pageIndex,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        )
       ],
     );
   }
