@@ -323,8 +323,7 @@ class _SearchComponentState extends State<SearchComponent> {
                 builder: (context) => DialogComponent(
                   data: roomData,
                 ),
-              );
-              setState(() {});
+              ).then((value) => setState(() {}));
             },
             title: Text(
                 '${roomData.getAdults} Adults.  ${roomData.getChildren} Children.  ${roomData.getRooms} room.'),

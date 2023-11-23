@@ -30,8 +30,12 @@ class _DialogComponentState extends State<DialogComponent> {
         color: Colors.transparent,
         alignment: Alignment.center,
         child: Container(
-          height: 220,
-          color: Colors.white,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.white,
+          ),
+          margin:const EdgeInsets.all(8),
+          height: 230,
           child: Column(
             children: [
               Row(
