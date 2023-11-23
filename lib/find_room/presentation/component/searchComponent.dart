@@ -226,6 +226,7 @@ class _SearchComponentState extends State<SearchComponent> {
       margin: const EdgeInsets.all(16),
       width: MediaQuery.of(context).size.width,
       child: ListView(
+        physics:const NeverScrollableScrollPhysics(),
         children: [
           Row(
             children: [

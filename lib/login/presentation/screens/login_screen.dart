@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:safar/find_room/presentation/screens/Home_Screen.dart';
 import 'package:safar/find_room/presentation/screens/Room_Screen.dart';
 import 'package:safar/login/presentation/component/button_component.dart';
 import 'package:safar/login/presentation/component/text_form_field_component.dart';
@@ -82,7 +83,7 @@ class SignInScreen extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const RoomScreen(),
+                                  builder: (context) => const HomeScreen(),
                                 ),
                               );
                             }),

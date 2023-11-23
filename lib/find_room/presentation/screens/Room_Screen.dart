@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:safar/find_room/presentation/screens/searchComponent.dart';
+import 'package:safar/find_room/presentation/component/searchComponent.dart';
 
 class RoomScreen extends StatelessWidget {
   const RoomScreen({super.key});

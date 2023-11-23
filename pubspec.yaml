@@ -38,6 +38,7 @@ dependencies:
   syncfusion_flutter_datepicker: ^23.1.41
   equatable: ^2.0.5
   animated_text_kit: ^4.2.2
+  curved_navigation_bar: ^1.0.3
 
 dev_dependencies:
   flutter_test:
